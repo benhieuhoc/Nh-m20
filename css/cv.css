@@ -1,0 +1,158 @@
+/* Định dạng chung */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 60px; /* Đảm bảo nội dung không bị footer che */
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 1em;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Main content */
+main {
+    padding: 2em;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+/* Who I Am */
+#who-i-am img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* What I Do */
+#what-i-do ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+}
+
+#what-i-do ul li {
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#what-i-do ul li:hover {
+    transform: scale(1.05);
+    background-color: #eee;
+}
+
+/* My Journey */
+#my-journey ol {
+    list-style: none;
+    padding: 0;
+}
+
+#my-journey li {
+    margin-bottom: 1em;
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Get in Touch */
+#get-in-touch a {
+    color: #333;
+    text-decoration: none;
+}
+
+#get-in-touch i {
+    font-size: 1.5em;
+    margin-right: 0.5em;
+}
+
+#get-in-touch a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    display: none;
+    padding: 0.5em 1em;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Animation */
+.animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    header nav ul {
+        flex-direction: column;
+    }
+    header nav ul li {
+        margin: 0.5em 0;
+    }
+    #what-i-do ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    #what-i-do ul li {
+        width: 80%;
+        margin-bottom: 1em;
+    }
+    #who-i-am img {
+        width: 100px;
+        height: 100px;
+    }
+}
